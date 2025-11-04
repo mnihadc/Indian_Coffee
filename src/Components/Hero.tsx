@@ -117,7 +117,7 @@ const Hero = () => {
                 label: "Documentaries",
                 description: "Brewing & History",
               },
-            ].map((metric, index) => (
+            ].map((metric) => (
               <div key={metric.label} className="text-center group">
                 <div className="bg-primary/20 p-4 rounded-2xl inline-block mb-4 group-hover:bg-primary/30 transition-colors duration-300 backdrop-blur-sm">
                   <metric.icon className="text-accent text-2xl mx-auto" />
@@ -167,7 +167,7 @@ const Hero = () => {
                 color: "from-accent to-primary",
                 buttonText: "Watch Videos",
               },
-            ].map((card, index) => (
+            ].map((card) => (
               <motion.div
                 key={card.title}
                 className="bg-white/80 dark:bg-gray-800/80 rounded-2xl p-6 shadow-lg border border-primary/20 hover:shadow-xl transition-all duration-300 group backdrop-blur-sm"

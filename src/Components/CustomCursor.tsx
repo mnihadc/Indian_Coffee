@@ -24,6 +24,9 @@ const CustomCursor = () => {
     default: {
       x: mousePosition.x - 16,
       y: mousePosition.y - 16,
+      height: 32,
+      width: 32,
+      backgroundColor: "#8b4513",
     },
     text: {
       height: 150,
@@ -35,32 +38,25 @@ const CustomCursor = () => {
     },
   };
 
-  const textEnter = () => setCursorVariant("text");
-  const textLeave = () => setCursorVariant("default");
-
   return (
-    <>
-      <motion.div
-        className="cursor"
-        variants={variants}
-        animate={cursorVariant}
-        transition={{ type: "tween", ease: "backOut" }}
-      />
-      <style jsx>{`
-        .cursor {
-          background-color: #8b4513;
-          height: 32px;
-          width: 32px;
-          border-radius: 50%;
-          position: fixed;
-          top: 0;
-          left: 0;
-          pointer-events: none;
-          z-index: 9999;
-          mix-blend-mode: difference;
-        }
-      `}</style>
-    </>
+    <motion.div
+      className="cursor"
+      variants={variants}
+      animate={cursorVariant}
+      transition={{ type: "tween", ease: "backOut" }}
+      style={{
+        backgroundColor: "#8b4513",
+        height: "32px",
+        width: "32px",
+        borderRadius: "50%",
+        position: "fixed",
+        top: 0,
+        left: 0,
+        pointerEvents: "none",
+        zIndex: 9999,
+        mixBlendMode: "difference",
+      }}
+    />
   );
 };
 

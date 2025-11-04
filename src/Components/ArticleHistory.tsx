@@ -11,13 +11,16 @@ import {
 
 const ArticleHistory = () => {
   return (
-    <section id="history" className="min-h-screen bg-gradient-to-br from-background/95 via-accent/5 to-primary/5 pt-40 pb-20">
+    <section
+      id="history"
+      className="min-h-screen bg-gradient-to-br from-background/95 via-accent/5 to-primary/5 pt-40 pb-20"
+    >
       {/* Enhanced Background Pattern */}
       <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-primary/10" />
-      
+
       {/* Subtle Grid Pattern */}
       <div className="absolute inset-0 opacity-[0.03] bg-[linear-gradient(rgba(139,69,19,0.3)_1px,transparent_1px),linear-gradient(90deg,rgba(139,69,19,0.3)_1px,transparent_1px)] bg-[size:64px_64px]" />
-      
+
       {/* Dark Overlay for Depth */}
       <div className="absolute inset-0 bg-gradient-to-br from-text/10 to-primary/15" />
 
@@ -131,7 +134,7 @@ const ArticleHistory = () => {
                   The story of Indian coffee is a fascinating tale of colonial
                   enterprise, traditional wisdom, and modern innovation. From
                   its humble beginnings in the 17th century to becoming one of
-                  the world's most sought-after coffee origins, India's coffee 
+                  the world's most sought-after coffee origins, India's coffee
                   journey is as rich and complex as the brew itself.
                 </p>
               </div>
@@ -178,13 +181,13 @@ const ArticleHistory = () => {
                         "Economic reforms opened new opportunities for Indian coffee exporters, leading to increased global recognition and premium positioning in international markets.",
                       color: "bg-secondary",
                     },
-                  ].map((era, index) => (
+                  ].map((era) => (
                     <motion.div
                       key={era.year}
                       className="flex gap-6 group"
                       initial={{ opacity: 0, x: -20 }}
                       animate={{ opacity: 1, x: 0 }}
-                      transition={{ delay: 0.7 + index * 0.1 }}
+                      transition={{ delay: 0.7 }}
                     >
                       <div className="flex flex-col items-center">
                         <div
@@ -250,14 +253,14 @@ const ArticleHistory = () => {
                         "Emerging coffee region in the Araku Valley, gaining recognition for its organic and specialty coffee production.",
                       stats: "3% of production",
                     },
-                  ].map((hub, index) => (
+                  ].map((hub) => (
                     <motion.div
                       key={hub.region}
                       className="bg-white/80 dark:bg-gray-800/80 rounded-2xl p-6 border border-primary/10 hover:shadow-xl transition-all duration-300 group backdrop-blur-sm"
                       whileHover={{ y: -5 }}
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
-                      transition={{ delay: 0.9 + index * 0.1 }}
+                      transition={{ delay: 0.9 }}
                     >
                       <h3 className="text-xl font-playfair font-bold text-text dark:text-white mb-3">
                         {hub.region}
@@ -371,7 +374,7 @@ const ArticleHistory = () => {
                       "Coffee Plantation Techniques",
                       "Indian Coffee Global Impact",
                       "Sustainable Coffee Farming",
-                    ].map((article, index) => (
+                    ].map((article) => (
                       <a
                         key={article}
                         href="#"
@@ -399,7 +402,7 @@ const ArticleHistory = () => {
                       { label: "Major Regions", value: "4 States" },
                       { label: "Global Rank", value: "6th Largest" },
                       { label: "Annual Production", value: "348,000 MT" },
-                    ].map((fact, index) => (
+                    ].map((fact) => (
                       <div
                         key={fact.label}
                         className="flex justify-between items-center py-2 border-b border-accent/20 last:border-b-0"

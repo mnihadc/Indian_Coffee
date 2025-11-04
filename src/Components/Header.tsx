@@ -22,7 +22,7 @@ const Header = () => {
   const menuItems = [
     {
       name: "Home",
-      href: "#home",
+      href: "/",
       icon: FaCoffee,
     },
     {
@@ -31,9 +31,9 @@ const Header = () => {
       icon: FaBook,
       submenu: [
         { name: "Coffee History", href: "/history" },
-        { name: "Brewing Methods", href: "#brewing" },
-        { name: "Health Benefits", href: "#health" },
-        { name: "Sustainability", href: "#sustainability" },
+        { name: "Brewing Methods", href: "/brewing" },
+        { name: "Health Benefits", href: "/health-benifits" },
+        { name: "Sustainability", href: "/sustainability" },
       ],
     },
     {
@@ -41,8 +41,8 @@ const Header = () => {
       href: "#gallery",
       icon: FaImages,
       submenu: [
-        { name: "Coffee Plantations", href: "#plantations" },
-        { name: "Processing", href: "#processing" },
+        { name: "Coffee Plantations", href: "/plantation-gallery" },
+        { name: "Processing", href: "/processing-gallery" },
         { name: "Coffee Culture", href: "#culture" },
       ],
     },
@@ -163,7 +163,7 @@ const Header = () => {
 
             {/* Desktop Navigation */}
             <div className="hidden xl:flex items-center space-x-1">
-              {menuItems.map((item, index) => {
+              {menuItems.map((item) => {
                 const IconComponent = item.icon;
                 return (
                   <div
@@ -178,7 +178,7 @@ const Header = () => {
                       whileHover={{ y: -2 }}
                       initial={{ opacity: 0, y: -20 }}
                       animate={{ opacity: 1, y: 0 }}
-                      transition={{ delay: index * 0.1 }}
+                      transition={{ delay: 0.1 }}
                     >
                       {IconComponent && (
                         <IconComponent className="text-lg opacity-70" />
@@ -249,11 +249,11 @@ const Header = () => {
 
               {/* Social Media Icons - Desktop */}
               <div className="hidden lg:flex items-center space-x-2 border-l border-primary/20 pl-4 ml-2">
-                {socialIcons.map((social, index) => {
+                {socialIcons.map((social) => {
                   const Icon = social.icon;
                   return (
                     <motion.a
-                      key={index}
+                      key={social.label}
                       href={social.href}
                       className="p-2 text-text/60 dark:text-gray-400 hover:text-primary dark:hover:text-accent hover:bg-primary/10 rounded-lg transition-all duration-300"
                       whileHover={{ scale: 1.1, y: -2 }}
@@ -296,7 +296,7 @@ const Header = () => {
             >
               <div className="max-h-96 overflow-y-auto">
                 <div className="p-2">
-                  {menuItems.map((item, index) => {
+                  {menuItems.map((item) => {
                     const IconComponent = item.icon;
                     return (
                       <div key={item.name} className="mb-1 last:mb-0">
@@ -338,11 +338,11 @@ const Header = () => {
                 {/* Social Icons at Bottom */}
                 <div className="border-t border-primary/20 p-4 bg-background/50 dark:bg-gray-700/50">
                   <div className="flex justify-center space-x-4">
-                    {socialIcons.map((social, index) => {
+                    {socialIcons.map((social) => {
                       const Icon = social.icon;
                       return (
                         <motion.a
-                          key={index}
+                          key={social.label}
                           href={social.href}
                           className="p-2 bg-primary/10 text-primary dark:text-accent rounded-lg hover:bg-primary/20 transition-colors duration-200"
                           whileHover={{ scale: 1.1 }}
