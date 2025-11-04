@@ -30,7 +30,7 @@ const Header = () => {
       href: "#articles",
       icon: FaBook,
       submenu: [
-        { name: "Coffee History", href: "#history" },
+        { name: "Coffee History", href: "/history" },
         { name: "Brewing Methods", href: "#brewing" },
         { name: "Health Benefits", href: "#health" },
         { name: "Sustainability", href: "#sustainability" },

@@ -235,9 +235,11 @@ const Hero = () => {
                 ?.scrollIntoView({ behavior: "smooth" })
             }
           >
-            <span className="text-sm font-inter font-medium tracking-wide group-hover:text-primary transition-colors">
-              EXPLORE CONTENT
-            </span>
+            <a href="/history">
+              <span className="text-sm font-inter font-medium tracking-wide group-hover:text-primary transition-colors">
+                EXPLORE CONTENT
+              </span>
+            </a>
             <FaArrowDown className="text-lg group-hover:text-primary transition-colors" />
           </motion.div>
         </motion.div>
